@@ -1,0 +1,36 @@
+body{
+    background-image: url('./back.png');
+    color: white;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+#title{
+    font-size: 100px;
+    font-family: 'Chewy', cursive;
+    text-align: center;
+    margin-top: 90px;
+}
+
+#playbutton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#play{
+    background-color: green;
+    border: 7px solid white;
+    color: white;
+    font-size: 60px;
+    padding: 20px 40px; 
+    border-radius: 1000px; 
+    cursor: pointer;
+    margin-top: 80px;
+    transition: transform 0.2s ease-in-out;
+}
+
+#play:hover{
+    transform: scale(1.1); 
+}
