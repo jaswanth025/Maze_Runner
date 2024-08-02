@@ -1,36 +1,160 @@
-body{
-    background-image: url('./back.png');
-    color: white;
-    background-size: cover; 
-    background-position: center; 
-    background-repeat: no-repeat;
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html,
+body {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url("./back.png");
+  color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-#title{
-    font-size: 100px;
-    font-family: 'Chewy', cursive;
-    text-align: center;
-    margin-top: 90px;
+#view {
+  margin-top: 30px;
 }
 
-#playbutton{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+#mazeContainer {
+  position: relative;
+  top: 15px;
+  display: inline-block;
+  margin: auto;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 
-#play{
-    background-color: green;
-    border: 7px solid white;
-    color: white;
-    font-size: 60px;
-    padding: 20px 40px; 
-    border-radius: 1000px; 
-    cursor: pointer;
-    margin-top: 80px;
-    transition: transform 0.2s ease-in-out;
+#mazeCanvas {
+  display: block;
+  border: solid 2px black;
+  height: 550px;
+  width: 550px;
+  background-color: #27a336;
 }
 
-#play:hover{
-    transform: scale(1.1); 
+input,
+select {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 45px;
+  width: 150px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  display: inline-block;
+  font-size: 15px;
+  text-align: center;
+  text-decoration: none;
+  appearance: none;
+}
+
+input:hover,
+select:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+input:active,
+select:active {
+  background-color: black;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+}
+
+.custom-select {
+  display: inline-block;
+}
+
+.custom-select select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-position: 125px center;
+}
+
+#Message-Container {
+  visibility: hidden;
+  color: white;
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
+
+#Message-Container #message {
+  width: 300px;
+  height: 300px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  margin-left: -150px;
+  margin-top: -150px;
+}
+
+#page {
+  text-align: center;
+  height: auto;
+  width: auto;
+  margin: auto;
+}
+
+#page #menu {
+  margin: auto;
+  padding: 10px;
+  height: 65px;
+  box-sizing: border-box;
+}
+
+#page #menu h1 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 3.2rem;
+}
+
+#page #view {
+  position: absolute;
+  top: 65px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: auto;
+}
+
+.border {
+  border: 10px black solid;
+  border-radius: 10px;
+}
+
+#instructions {
+  margin-top: 425px;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 400px) {
+  input,
+  select {
+    width: 120px;
+  }
 }
